@@ -1,9 +1,9 @@
 package com.ojas.wireframes.entity;
 
+import java.time.LocalDateTime;
+import java.util.Date;
 
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.SQLDelete;
-import org.hibernate.annotations.Where;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,28 +12,17 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="PLANS")
-@SQLDelete(sql = "UPDATE PLANS SET visible = true WHERE id=?")
-@Where(clause = "visible=false")
-public class PlansEntity {
+@Table(name="PLANSHISTORY")
+public class PlansHistoryEntity {
 
 	@Id
-	@GeneratedValue(generator="mygenerator",strategy=GenerationType.AUTO)
-	@GenericGenerator( name = "mygenerator",strategy = "increment")
+	private LocalDateTime publishedDate;
 	private int id;
 	private String palneName;
 	private double price;
 	private double storage;
 	private String descrption;
-
-	private boolean visible;
 	
-	public String getDescrption() {
-		return descrption;
-	}
-	public void setDescrption(String descrption) {
-		this.descrption = descrption;
-	}
 	public int getId() {
 		return id;
 	}
@@ -58,16 +47,29 @@ public class PlansEntity {
 	public void setStorage(double storage) {
 		this.storage = storage;
 	}
+	public String getDescrption() {
+		return descrption;
+	}
+	public void setDescrption(String descrption) {
+		this.descrption = descrption;
+	}
+	public LocalDateTime getPublishedDate() {
+		return publishedDate;
+	}
+	public void setPublishedDate(LocalDateTime localDate) {
+		this.publishedDate = localDate;
+	}
 	
-	public PlansEntity(int id, String palneName, double price, double storage,String descrption) {
+	public PlansHistoryEntity(int id, String palneName, double price, double storage, String descrption, LocalDateTime publishedDate) {
 		this.id = id;
 		this.palneName = palneName;
 		this.price = price;
 		this.storage = storage;
-		this.descrption=descrption;
+		this.descrption = descrption;
+		this.publishedDate = publishedDate;
 	}
 	
-	public PlansEntity() {
+	public PlansHistoryEntity() {
 		
 	}
 	

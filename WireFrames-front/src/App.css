@@ -42,3 +42,64 @@ div.freeShippingRibbon {
   top: -2px;
   z-index: -1;
 }
+
+
+div.freeShippingRibbon1 {
+  height: 35px;
+  width: 180px;
+  background-color: #9C1B21;
+  position: absolute;
+  top: 48px;
+  right: -6px;
+  text-align: center;
+  color: #FFF;
+  font-weight: 600;
+  font-size: 24px;
+  white-space: nowrap;
+-webkit-transform: rotate(35deg);
+  -moz-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+.btncolor{
+  background-color: #0045ad;
+}
+
+.freeShippingRibbon1:before {
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 37px;
+  border-left-width: 53px;
+  border-right-width: 26px;
+  content: "";
+  display: block;
+  left: -49px;
+  position: absolute;
+  width: 141%;
+  border-top-width: 0px;
+  border-bottom-color: #9c1b21;
+  top: -2px;
+  z-index: -1;
+}
+
+
+.banerimg{
+  background-image: url("../src/Images/banner.jpg");
+  height: 530px;
+}
+
+
+.container-fluid .txtheading{
+  top:30%;
+  position: absolute;
+  left: 30%;
+}
+
+.container-fluid Button{
+  top:40%;
+  left: 45%;
+  position: absolute;
+}

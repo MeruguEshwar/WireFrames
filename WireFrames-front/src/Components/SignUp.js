@@ -58,7 +58,7 @@ function SignUp() {
                     <Button
                       variant="contained"
                       style={{ fontSize: "12px" }}
-                      //   onClick={redirectTosignUp}
+                    //   onClick={redirectTosignUp}
                     >
                       <SupportIcon className="me-1" />
                       HELP
@@ -76,12 +76,18 @@ function SignUp() {
                 </div>
               </div>
             </nav>
+          </div>
+        </div>
+      </div>
 
-            <div className="card-group container mt-5 d-flex justify-content-center">
+      <div className="col-lg-12">
+        <div className="col-md-12">
+          <div className="col-sm-12">
+            <div className="card-group container mt-5 justify-content-center">
               <div className="card rounded" style={{ maxWidth: "20rem" }}>
-              <div class="freeShippingRibbon">50% Off</div>
-                <div class="card-header bg-transparent">
-                  <h5>PRO</h5>
+                <div class="freeShippingRibbon">30% Off</div>
+                <div class="card-header bg-light">
+                  <h5 className="text-center mt-5 fw-bold fs-1 fst-italic" style={{ color: "#0045ad" }}>PRO</h5>
                   <p>1 User</p>
                   <p>1 TB (1000 GB)</p>
                   <p>$7.50/month</p>
@@ -89,7 +95,7 @@ function SignUp() {
                   <p className="text-center">
                     billed annually or $5.00 month-to-month
                   </p>
-                  <button className="btn btn-primary">GET PRO</button>
+                  <button type="button" className="btn btn-primary btncolor ">GET PRO</button>
                 </div>
                 <div className="card-body">
                   <h5 className="card-title"></h5>
@@ -109,9 +115,9 @@ function SignUp() {
                 className="card ms-5 me-5 border-start rounded"
                 style={{ maxWidth: "20rem" }}
               >
-                <div class="freeShippingRibbon">50% Off</div>
-                <div class="card-header bg-transparent">
-                  <h5>BUSSINESS</h5>
+                <div class="freeShippingRibbon1">50% Off</div>
+                <div class="card-header bg-light">
+                  <h5 className="text-center mt-5 fw-bold fs-4 fst-italic" style={{ color: "#0045ad" }}>BUSSINESS</h5>
                   <p>1 User</p>
                   <p>1 TB (1000 GB)</p>
                   <p>$7.50/month</p>
@@ -138,9 +144,9 @@ function SignUp() {
                 className="card border-start rounded"
                 style={{ maxWidth: "20rem" }}
               >
-                <div class="freeShippingRibbon">50% Off</div>
-                <div class="card-header bg-transparent">
-                  <h5>BASIC</h5>
+                {/* <div class="freeShippingRibbon">50% Off</div> */}
+                <div class="card-header bg-light">
+                  <h5 className="text-center mt-5 fw-bold fs-2 fst-italic" style={{ color: "#0045ad" }}>BASIC</h5>
                   <p>1 User</p>
                   <p>1 TB (1000 GB)</p>
                   <p>$7.50/month</p>

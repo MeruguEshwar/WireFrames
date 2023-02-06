@@ -8,8 +8,13 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 function Header() {
   const navigate = useNavigate();
 
+  
   const redirectTosignUp = () => {
     navigate("/signup");
+  };
+
+  const redirectTosignIn = () => {
+    navigate("/signin");
   };
 
   return (
@@ -68,6 +73,7 @@ function Header() {
                     endIcon={<FacebookRoundedIcon />}
                     className="me-5"
                     style={{ fontSize: "12px" }}
+                    onClick={redirectTosignIn}
                   >
                     LOGIN
                     <TwitterIcon />

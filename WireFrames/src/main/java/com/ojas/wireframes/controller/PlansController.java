@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ojas.wireframes.entity.PlansEntity;
+import com.ojas.wireframes.entity.PlansHistoryEntity;
 import com.ojas.wireframes.repository.PlansRepository;
+import com.ojas.wireframes.service.PlansServiceImplementation;
 
 @RestController()
 @RequestMapping("/plans")
@@ -23,9 +25,12 @@ public class PlansController {
 	@Autowired
 	private PlansRepository plansrepository;
 	
+	@Autowired
+	private PlansServiceImplementation planserviceImpl;
+	
 	@PostMapping("/createplan")
-	public PlansEntity createPlans(@RequestBody PlansEntity plansEntity) {
-		return plansrepository.save(plansEntity);
+	public int createPlans(@RequestBody PlansEntity plansEntity) {
+		return planserviceImpl.CreatePlan(plansEntity);
 	}
 	
 	@GetMapping("/allPlans")
@@ -41,11 +46,11 @@ public class PlansController {
 	
 	@DeleteMapping("/deleteById/{id}")
 	public void DeletePlan(@PathVariable("id") int id) {
-		 plansrepository.deleteById(id);
+		planserviceImpl.removePlan(id);
 	}
-	
+
 	@PutMapping("/update")
-	public PlansEntity updateProduct(@RequestBody PlansEntity plansEntity) {
-		return plansrepository.save(plansEntity);
+	public void updatePlan(@RequestBody PlansEntity plansEntity) {
+		planserviceImpl.updateUserAccount(plansEntity);
 	}
 }
